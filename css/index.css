@@ -1,0 +1,298 @@
+/* 基础样式 */
+:root {
+    --primary-color: #e8ca6f; /* 主色调 - 嫩黄色 */
+    --secondary-color: #F8C8C8; /* 次要色调 - 粉色 */
+    --accent-color: #e8b992; /* 强调色 - 橙色 */
+    --text-color: #5E503F; /* 文字颜色 - 深棕色 */
+    --light-color: #FFF9EC; /* 浅色背景 */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全域背景图设置 */
+body {
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景图片样式 */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.8;
+    filter: blur(2px);
+}
+
+/* 主容器 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* 自我介绍容器 */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #5E503F; /* 深棕色文字保证可读性 */
+        
+}
+
+/* 小熊图标样式 */
+.bear-icon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+.bear-head {
+    width: 100%;
+    height: 100%;
+    background-color: #ec9f5f;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.bear-ear {
+    width: 40%;
+    height: 40%;
+    background-color: #5E503F;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+}
+
+.bear-ear.left-ear {
+    left: -5%;
+}
+
+.bear-ear.right-ear {
+    right: -5%;
+}
+
+.bear-face {
+    width: 70%;
+    height: 70%;
+    background-color: #e9de63;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+.bear-eye {
+    width: 20%;
+    height: 20%;
+    background-color: #5E503F;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+}
+
+.bear-eye.left-eye {
+    left: 25%;
+}
+
+.bear-eye.right-eye {
+    right: 25%;
+}
+
+.bear-nose {
+    width: 15%;
+    height: 10%;
+    background-color: #5E503F;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 42.5%;
+}
+
+.bear-mouth {
+    width: 30%;
+    height: 12px;
+    position: absolute;
+    top: 68%; /* 稍微上移 */
+    left: 35%;
+    border-bottom: 3px solid #5E503F;
+    border-radius: 0 0 50px 50px; /* 更明显的弧度 */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    transform: rotate(2deg); /* 轻微倾斜更自然 */
+}
+
+.bear-mouth::before,
+.bear-mouth::after {
+    content: '';
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: #5E503F;
+    position: absolute;
+    top: -300%;
+}
+
+.bear-mouth::before {
+    left: 20%;
+}
+
+.bear-mouth::after {
+    right: 20%;
+}
+.bear-mouth::before,
+.bear-mouth::after {
+    display: none;
+}
+/* 气泡自我介绍样式 */
+.speech-bubble {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-out;
+}
+
+.bubble-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    position: relative;
+    text-align: center;
+}
+
+.bubble-content h1 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.bubble-content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.bubble-tail {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid rgba(255, 255, 255, 0.95);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 4px 2px rgba(0,0,0,0.1));
+}
+
+/* 探索按钮 */
+.explore-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.explore-btn:hover {
+    background-color: #e68a4f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-btn i {
+    margin-left: 8px;
+}
+
+/* 动画效果 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .bubble-content {
+        padding: 20px;
+    }
+    
+    .bubble-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .bear-icon {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bubble-content {
+        padding: 15px;
+    }
+    
+    .bubble-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .bubble-content p {
+        font-size: 1rem;
+    }
+    
+    .explore-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
