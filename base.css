@@ -1,0 +1,35 @@
+/* 全局样式 */
+:root {
+    --primary-color: #FFDE7D; /* 主色调 - 嫩黄色 */
+    --secondary-color: #F8C8C8; /* 次要色调 - 粉色 */
+    --accent-color: #f4c59f; /* 强调色 - 橙色 */
+    --text-color: #5E503F; /* 文字颜色 - 深棕色 */
+    --light-color: #FFF9EC; /* 浅色背景 */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 响应式布局 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
