@@ -13,7 +13,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* 小屏设备（手机） */
+@media screen and (max-width: 768px) {
+  .container { padding: 10px; }
+}
 
+/* 中等屏幕（平板） */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container { padding: 20px; }
+}
+
+/* 大屏设备（PC） */
+@media screen and (min-width: 1025px) {
+  .container { padding: 30px; }
+}
 body {
     font-family: 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
     color: var(--text-color);
