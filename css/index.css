@@ -27,21 +27,22 @@ body {
     line-height: 1.5;
 }
 
-/* 平板适配 */
-@media (min-width: 768px) {
-    body {
-        padding: 2rem;
-        max-width: 90vw;
-        margin: 0 auto;
-    }
+
+/* 小屏设备（手机） */
+@media screen and (max-width: 768px) {
+  .container { padding: 10px; }
 }
 
-/* 桌面适配 */
-@media (min-width: 1200px) {
-    body {
-        max-width: 1200px;
-    }
+/* 中等屏幕（平板） */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container { padding: 20px; }
 }
+
+/* 大屏设备（PC） */
+@media screen and (min-width: 1025px) {
+  .container { padding: 30px; }
+}
+
 /* 全域背景图设置 */
 body {
     font-family: 'Arial', 'Microsoft YaHei', sans-serif;
