@@ -1,0 +1,16 @@
+   <!--歌单板块-->
+    <div class="playlist-section"></div>
+         <h3><i class="fas fa-heart"></i> 我喜欢的歌单&歌手</h3>
+         <div class="playlist-list"></div>
+        <!--歌单项-->
+            <div class="list-item">
+                <a href="#"></a><img src="../img/十二月.jpg" >
+                <p class="list-title">如果十二月不会结束</p>
+                <p class="list-desc">“每次听到这个歌单的歌就像进入了静谧的冬天与过年倒计时”</p>
+        </div>
+          <div class="list">
+            <div class="list-item">
+                <a href="#"></a><img src="../img/梁祝.jpg" >
+                <p class="list-title">梁祝的继承者们</p>
+                <p class="list-desc">“喜欢这个音乐剧的调调”</p>
+        </div>
