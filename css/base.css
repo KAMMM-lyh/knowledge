@@ -33,3 +33,32 @@ a {
     margin: 0 auto;
     padding: 0 20px;
 }
+/* 基础样式 */
+:root {
+    --primary-color: #3498db;
+    --mobile-breakpoint: 768px;
+}
+
+/* 移动端优先样式 */
+body {
+    font-family: 'Segoe UI', system-ui;
+    margin: 0;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+/* 平板适配 */
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+/* 桌面适配 */
+@media (min-width: 1200px) {
+    body {
+        max-width: 1200px;
+    }
+}
